@@ -1,3 +1,7 @@
 export default function App() {
-  return <div>App</div>;
+  return (
+    <div>
+      <h1>Welcome to BlueRabbitPTD</h1>
+    </div>
+  );
 }

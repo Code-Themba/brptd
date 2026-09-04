@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 80px;
+  padding: 2rem 4rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(44, 43, 43, 0.2);
+  box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.1);
+  /* 100px 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav ul li {
+  position: relative;
+  cursor: pointer;
+  max-height: fit-content;
+  padding: 0.5rem 1rem;
+}
+
+nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #1568a0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+nav .cta-links {
+  display: flex;
+  gap: 1rem;
+}
+nav .cta-links a {
+  padding: 0.9rem 1.2rem;
+  border-radius: 5px;
+}
+
+nav .cta-links .get-started {
+  background-color: #1568a0;
+  color: #fff;
+  font-weight: 700;
+}
+
+nav .cta-links .get-started:hover {
+  background-color: #0f4c7a;
+}
+
+nav ul li:hover::after {
+  transform: scaleX(1);
+}
+
+.app {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  padding: 2rem 4rem;
+}
